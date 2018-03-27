@@ -25,7 +25,8 @@ function isPalindrome(input){
 console.log(isPalindrome('hahahaha'))
 
 
-//third version
+//third version - proverqvam dali stringa e sushtiq ako go cheta otzad napred 
+
 
 function palindromchi(string){
   return string.split('').reverse().join('') === string;

@@ -29,7 +29,7 @@ function dayOfWeek(day){
 
 
 
-//second version
+//second version - return mi dava realno index-a na stringa v array-a 
 
 function daysOfWeek(day){
   let arr = ['Monday', 'Tuesday', 'Wednesday', 'Tursday', 'Friday', 'Saturday', 'Sunday']
