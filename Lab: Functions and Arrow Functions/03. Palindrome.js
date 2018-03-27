@@ -23,3 +23,12 @@ function isPalindrome(input){
 }
 
 console.log(isPalindrome('hahahaha'))
+
+
+//third version
+
+function palindromchi(string){
+  return string.split('').reverse().join('') === string;
+}
+
+console.log(palindromchi('azsammasza'));
