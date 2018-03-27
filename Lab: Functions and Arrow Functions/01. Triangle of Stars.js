@@ -14,3 +14,19 @@ function triangleOfStars(num){
         console.log(stars);
     }
 }
+
+
+
+
+//second version
+
+function printTriangle(n){
+    function printStars(count){
+      console.log("*".repeat(count));
+    }
+    for (let rows =1; rows <= n; rows++ ) printStars(rows);
+    for ( let cols =n-1; cols > 0; cols--) printStars(cols);
+  }
+  
+  
+  console.log(printTriangle(5))

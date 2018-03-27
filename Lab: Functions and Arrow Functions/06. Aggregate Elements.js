@@ -15,3 +15,11 @@ function aggElements(nums){
 }
 
 console.log(aggElements([1,2,3]));
+
+
+function aggregateElements(elements){
+    aggregate(elements, 0, (a,b) => a +b);
+    
+  }
+
+  

@@ -10,3 +10,16 @@ function palindrome(input){
       console.log(not)
   
   }
+
+
+  //second version
+function isPalindrome(input){
+  for (let i=0; i<input.length/2; i++){
+    if (input[i] != input[input.legth-i-1]){
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(isPalindrome('hahahaha'))
