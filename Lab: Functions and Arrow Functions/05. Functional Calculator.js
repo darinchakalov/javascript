@@ -35,3 +35,21 @@ function calculate(a,b,op){
 }
   
 console.log(calculate(18,-1,"*"))
+
+
+//slightly different version
+
+function calculate(a,b,op){
+  let add= function(c,d){return c+d};
+  let substract= function(c,d){return c-d};
+  let multiply= function(c,d){return c*d};
+  let devide= function(c,d){return c/d};
+  switch(op){
+    case '+': return add(a,b);
+    case '-': return substract(a,b);
+    case '*': return multiply(a,b);
+    case '/': return devide(a,b);
+  }
+}
+  
+console.log(calculate(18,3,"*"))
