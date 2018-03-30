@@ -16,12 +16,13 @@ function aggElements(nums){
 
 console.log(aggElements([1,2,3]));
 
-
+//second version with arrow functions
 function aggregateElements(elements){
     aggregate(elements, 0, (a,b) => a +b); 
     aggregate(elements, 0, (a,b) => a + 1/b);
     aggregate(elements, '', (a,b) => a+b);
-    function aggregate(arr,initialValue, func){
+    function aggregate(arr,initialValue, func){ //the func here is the 3rd aggregate from the above rows.
+// for instance (a,b) => a +b
         let val = initialValue;
         for (let i =0; i< arr.length; i++){
             val = func(val,arr[i]);
