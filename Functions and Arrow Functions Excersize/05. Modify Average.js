@@ -1,4 +1,4 @@
-function modifyAverage(num){
+/*function modifyAverage(num){
     let nums = num.toString();
     //console.log(caclulateAvarage(nums))
     function caclulateAvarage(nums){
@@ -20,7 +20,13 @@ function modifyAverage(num){
         console.log('not')
         return false;
       }*/
-    }
-  }
+    //}
+  //} 
   
+
+
+  function modifyAverage(num){
+      nums = String(num);
+      
+  }
   console.log(modifyAverage(5665))
