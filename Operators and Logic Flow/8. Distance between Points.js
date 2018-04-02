@@ -7,3 +7,4 @@ function distance(x1,y1,x2,y2) {
     return Math.sqrt(distanceX + distanceY);
 }
 
+console.log(distance(3,0,0,4))
