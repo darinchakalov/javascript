@@ -3,10 +3,9 @@ function validityChecker(inputArr){
     let y1=inputArr[1]
     let x2=inputArr[2]
     let y2=inputArr[3]
-    let z1 = 0;
-    let z2 = 0;
-    isValid(x1,y1,z1,z2)
-    isValid(x2,y2,z1,z2)
+
+    isValid(x1,y1,0,0)
+    isValid(x2,y2,0,0)
     isValid(x1,y1,x2,y2)
 
     function isValid(pointA1, pointA2, pointB1, pointB2){
