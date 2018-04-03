@@ -23,3 +23,4 @@ function validityChecker(inputArr){
 
 
 console.log(validityChecker([2,1,1,1]))
+
