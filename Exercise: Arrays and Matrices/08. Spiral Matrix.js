@@ -18,7 +18,13 @@ function spiralMatrix(rows,cols){
         }
         // bottom row
         for(let i= --currentCol; i>= 0 ; i--){
-            matrix[currentRow][currentCol] = number++
+            matrix[currentRow][currentCol--] = number++
+        }
+        // left col upwards
+        currentCol+=1
+        currentRow-=1
+        for(let i= currentRow; i> 0 ; i--){
+            matrix[currentRow--][currentCol] = number++
         }
         break;
     }
