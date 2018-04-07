@@ -8,7 +8,7 @@ function spiralMatrix(rows,cols){
 
     while (targetNum > number) {
         //top row
-        for (let i =0; i < cols; i++){
+        for (let i =currentRow; i < cols; i++){
             matrix[currentRow][currentCol++] = number++
         }
         // right col downwards
@@ -16,9 +16,16 @@ function spiralMatrix(rows,cols){
         for(let i= ++currentRow; i<= rows -1; i++){
             matrix[currentRow++][currentCol] = number++
         }
-        // bottom row
+        // bottom row leftwards
+        currentRow-=1
         for(let i= --currentCol; i>= 0 ; i--){
-            matrix[currentRow][currentCol] = number++
+            matrix[currentRow][currentCol--] = number++
+        }
+        // left col upwards
+        currentCol+=1
+        currentRow-=1
+        for(let i= currentRow; i> 0 ; i--){
+            matrix[currentRow--][currentCol] = number++
         }
         break;
     }
