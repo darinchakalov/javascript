@@ -1,33 +1,36 @@
 function spiralMatrix(rows,cols){
-    let targetNum = rows*cols
+    let targetNum = rows * cols;
     let number = 1;
     let matrix = fillMatrixWithZeros(rows,cols)
     
     let currentRow = 0;
     let currentCol = 0;
+    let rotations = 0;
 
-    while (targetNum > number) {
+    while (targetNum >= number) {
         //top row
-        for (let i =currentRow; i < cols; i++){
+        for (let i = rotations; i < cols - rotations; i++){
             matrix[currentRow][currentCol++] = number++
         }
         // right col downwards
         currentCol-=1
-        for(let i= ++currentRow; i<= rows -1; i++){
+        for(let i= ++currentRow; i<= rows -1 - rotations; i++){
             matrix[currentRow++][currentCol] = number++
         }
         // bottom row leftwards
         currentRow-=1
-        for(let i= --currentCol; i>= 0 ; i--){
+        for(let i= --currentCol; i>= rotations ; i--){
             matrix[currentRow][currentCol--] = number++
         }
         // left col upwards
         currentCol+=1
         currentRow-=1
-        for(let i= currentRow; i> 0 ; i--){
+        for(let i= currentRow; i> rotations ; i--){
             matrix[currentRow--][currentCol] = number++
         }
-        break;
+        rotations++
+        currentCol++
+        currentRow++
     }
     
     printMatrix(matrix)
