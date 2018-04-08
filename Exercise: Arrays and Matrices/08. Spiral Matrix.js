@@ -9,11 +9,7 @@ function spiralMatrix(rows,cols){
 
     while (targetNum >= number) {
         //top row
-<<<<<<< HEAD
-        for (let i =0; i < cols; i++){
-=======
         for (let i = rotations; i < cols - rotations; i++){
->>>>>>> 0210dc38b205999b64f073e0ac2ca8424540ddb4
             matrix[currentRow][currentCol++] = number++
         }
         // right col downwards
@@ -21,11 +17,6 @@ function spiralMatrix(rows,cols){
         for(let i= ++currentRow; i<= rows -1 - rotations; i++){
             matrix[currentRow++][currentCol] = number++
         }
-<<<<<<< HEAD
-        // bottom row
-        for(let i= --currentCol; i>= 0 ; i--){
-            matrix[currentRow][currentCol] = number++
-=======
         // bottom row leftwards
         currentRow-=1
         for(let i= --currentCol; i>= rotations ; i--){
@@ -36,7 +27,6 @@ function spiralMatrix(rows,cols){
         currentRow-=1
         for(let i= currentRow; i> rotations ; i--){
             matrix[currentRow--][currentCol] = number++
->>>>>>> 0210dc38b205999b64f073e0ac2ca8424540ddb4
         }
         rotations++
         currentCol++
