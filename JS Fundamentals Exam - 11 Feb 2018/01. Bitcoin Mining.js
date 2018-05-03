@@ -4,7 +4,7 @@ function bitcoinMining(data){
     let daysCount = 1
     let amountOfGold = 0 
     let dollarsInGold = 0
-    let dayBoughtOn = 0
+    let dayBoughtOn = []
     let costOfBitcoin = 11949.16
     let canAfford=0;
     let dollarsLeft = 0
@@ -20,19 +20,20 @@ function bitcoinMining(data){
             dollarsLeft = dollarsInGold - (costOfBitcoin*canAfford)
             amountOfGold = dollarsLeft / 67.51
             if (bitcoinsBought >=1 ){
-                dayBoughtOn = daysCount
+                dayBoughtOn.push(daysCount)
             }
             dollarsInGold = dollarsLeft
         }
         
         daysCount++
     }
-    dollarsInGold = dollarsInGold.toFixed(2)
+
+    dollarsInGold = Math.round(dollarsInGold*100) / 100
     dollarsInGold = Number(dollarsInGold)
 
     if(bitcoinsBought > 0){
         console.log(`Bought bitcoins: ${bitcoinsBought}`);
-        console.log(`Day of the first purchased bitcoin: ${dayBoughtOn}`);
+        console.log(`Day of the first purchased bitcoin: ${dayBoughtOn[0]}`);
         console.log(`Left money: ${dollarsInGold} lv.`);
     }else{
         console.log(`Bought bitcoins: ${bitcoinsBought}`);
@@ -40,6 +41,4 @@ function bitcoinMining(data){
     }
 }
 
-bitcoinMining([3124.15,
-    504.212,
-    2511.124])
+bitcoinMining([50,100])
